@@ -1,0 +1,46 @@
+/*
+Implementar una clase llamada Image que almacena imágenes.
+Las imágenes son matrices de elementos tipo "Pixel".
+También hay que implementar la clase Pixel, pero esta es más bien una estructura.
+Un Pixel contiene cuatro valores tipo unsigned char: R, G, B, A.
+Para almacenar las componentes de color rojo, verde, azul y transparencia (canal alpha) respectivamente.
+Los objetos de esta clase también pueden leer y escribir archivos de imagen en formato PNG específicamente.
+
+IMPLEMENTAR LA SIGUIENTE INTEFAZ:
+
+Constructor por Defecto. 
+
+Constructor paramétrico: Se indica el ancho y alto (width, height) y crea una imagen con esas dimensiones. 
+
+Constructor paramétrico que recibe el nombre de un archivo con la imagen que se va a adquirir. 
+
+Constructor copia. 
+
+Destructor. 
+
+operator= : Operador de asignación básica. 
+
+read() : Función que abre un archivo de imagen y lo carga en la memoria del objeto. 
+
+write() : Función que guarda en un archivo de imagen la información contenida en el objeto. 
+
+operator() : El operador paréntesis recibe dos parámetros: x,y; que corresponden con las coordenadas x,y de la imagen. La función regresa una referencia a este elemento para poder consultar su valor o modificarlo. 
+
+width() : regresa el ancho de la imagen. 
+
+height() : regresa el alto de la imagen. 
+
+operator+ : Combina dos imágenes superponiéndolas. La primera imagen va "arriba" (A),
+y la imagen de "abajo" (B) se puede ver a través de las zonas transparentes (o semitransparentes)
+de la imagen indicadas por el canal alpha. Este operador permite implementar expresiones como: 
+
+Image C = A + B; 
+El resultado (C) es la combinación de las imágenes A y B.
+
+ESTRUCTURA PIXEL
+
+Constructor por defecto. 
+
+Constructor paramétrico que recibe los cuatro valores: R, G, B, A. 
+*/
+
