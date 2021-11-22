@@ -43,7 +43,13 @@ Constructor por defecto.
 
 Constructor paramétrico que recibe los cuatro valores: R, G, B, A. 
 
-No es necesario (ni recomendable) implementar la lectura/escritura del formato de imagen. Para hacer
- la lectura del archivo, utilice una biblioteca para el manejo de imágenes tipo PNG, tal como pnglib o lodepng. 
+No es necesario (ni recomendable) implementar la lectura/escritura 
+del formato de imagen. Para hacer la lectura del archivo, utilice
+una biblioteca para el manejo de imágenes tipo PNG, tal como pnglib
+o lodepng. 
+
+No gastar tiempo con formatos de imagen, ya existen. Usar una libreria como pnglib
+lodepng es solo un .h que se incluye en la carpeta del proyecto y listo
+Viene documentacion con eso para ver y escribir una imagen
 */
 
