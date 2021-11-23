@@ -6,7 +6,6 @@ class Image{
     public:
     Image(); //Constructor por defecto
     Image(float ancho, float alto); //Constructor parametrico que crea una imagen con el ancho y alto indicado
-    Image(char nombreArchivo[]);
 
     private:
     float m_ancho;
