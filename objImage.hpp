@@ -1,7 +1,7 @@
 #ifndef OBJIMAGE_HPP
 #define OBJIMAGE_HPP
 
-
+#include "lodepng.h"
 class Image{
     public:
     Image(); //Constructor por defecto

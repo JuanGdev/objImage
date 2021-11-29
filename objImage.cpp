@@ -22,4 +22,5 @@ Image::Image(float ancho, float alto): Image()
 {
     m_ancho = ancho;
     m_alto = alto;
+    
 }
