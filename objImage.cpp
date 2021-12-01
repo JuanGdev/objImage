@@ -6,11 +6,9 @@ Image::Image():  m_width(0), m_height(0), image(0), filename(){}
 //Constructor paramétrico
 Image::Image(unsigned width, unsigned height)
 {
-  int argc;
-  char* argv[1];
     m_width = width;
     m_height = height;
-    filename = argc > 1 ? argv[1] : "test.png";
+    filename = "test.png";
     image.resize(m_width * m_height * 4);
       for(unsigned y = 0; y < height; y++)
          for(unsigned x = 0; x < width; x++) 
