@@ -24,7 +24,8 @@ read() : Función que abre un archivo de imagen y lo carga en la memoria del obj
 
 write() : Función que guarda en un archivo de imagen la información contenida en el objeto. 
 
-operator() : El operador paréntesis recibe dos parámetros: x,y; que corresponden con las coordenadas x,y de la imagen. La función regresa una referencia a este elemento para poder consultar su valor o modificarlo. 
+operator() : El operador paréntesis recibe dos parámetros: x,y; que corresponden con las coordenadas x,y de la imagen.
+La función regresa una referencia a este elemento para poder consultar su valor o modificarlo. 
 
 width() : regresa el ancho de la imagen. 
 
@@ -36,12 +37,6 @@ de la imagen indicadas por el canal alpha. Este operador permite implementar exp
 
 Image C = A + B; 
 El resultado (C) es la combinación de las imágenes A y B.
-
-ESTRUCTURA PIXEL
-
-Constructor por defecto. 
-
-Constructor paramétrico que recibe los cuatro valores: R, G, B, A. 
 
 No es necesario (ni recomendable) implementar la lectura/escritura 
 del formato de imagen. Para hacer la lectura del archivo, utilice
