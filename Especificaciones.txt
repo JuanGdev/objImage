@@ -20,9 +20,9 @@ Destructor.
 
 operator= : Operador de asignación básica. 
 
-read() : Función que abre un archivo de imagen y lo carga en la memoria del objeto. 
+Load() : Función que abre un archivo de imagen y lo carga en la memoria del objeto. 
 
-write() : Función que guarda en un archivo de imagen la información contenida en el objeto. 
+Save() : Función que guarda en un archivo de imagen la información contenida en el objeto. 
 
 operator() : El operador paréntesis recibe dos parámetros: x,y; que corresponden con las coordenadas x,y de la imagen.
 La función regresa una referencia a este elemento para poder consultar su valor o modificarlo. 

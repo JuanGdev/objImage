@@ -6,12 +6,13 @@ using namespace std;
 int main()
 {
     //Creando una imagen desde 0 con encode
-    Image testt(512,123);
+    Image testt;
+    testt.Load("decodem.png");
+    cout << "Ancho: " << testt.width() << endl;
+    cout << "Alto: " << testt.height() << endl;
 
-    //Leyendo la imagen del usuario
-    Image decodeTest("decodem.png");
-
-    //Constructor copia
-    Image copia = testt;
-
+    Image a("ug.png");
+    cout << "Ancho: " << a.width() << endl;
+    cout << "Alto: " << a.height() << endl;
+    a.Save("decodem.png");
 }
