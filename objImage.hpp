@@ -17,6 +17,8 @@ class Image{
     //Constructor copia
     Image(const Image& copy);
 
+    //Destructor
+    ~Image();
 
     //Funcion para leer los datos de una imagen
     void Load(const char* filename);
@@ -26,6 +28,13 @@ class Image{
     //Funciones de acceso
     unsigned width()const;
     unsigned height()const;
+
+    //Operator=
+    Image& operator=(const Image& other);
+
+    //Operator+
+    Image& operator+(const Image& B);
+
     private:
     //Ancho de la imagen
     unsigned m_width;
@@ -33,22 +42,16 @@ class Image{
     //Alto de la imagen
     unsigned m_height;
 
-
-    //Le pasamos el vector a la imagen que le escribe
+    //Le pasamos el vector a la imagen que lo escribe
     std::vector<unsigned char> m_image;
+
     //Valores RGBA de cada pixel. Cada canal es de tipo unsigned char.
     std::vector<unsigned char> m_data;
-    
     
     //Nombre del archivo
     const char* m_filename;
 
+    //Buffer
     std::vector<unsigned char> m_buffer;
 };
-
-//GUARDAR Y LEER
-//CONSTRUIR UNA IMAGEN CON DEFAULT
-//CARGAR IMAGEN OBJETO.LOAD("NOMBREIMG");
-//GUARDAR IMAGEN OBJETO.SAVE("NOMBREIMG");
-
 #endif

@@ -16,11 +16,13 @@ Image::Image(unsigned width, unsigned height)
  
 }
 
+//Constructor para cargar una imagen con su nombre
 Image::Image(const char* filename)
 {
   Load(filename);
 }
 
+//Constructor copia
 Image::Image(const Image& copy)
 {
   m_width = copy.m_width;
@@ -28,6 +30,11 @@ Image::Image(const Image& copy)
   m_image = copy.m_image; 
 }
 
+//Destructor
+Image::~Image()
+{
+  delete[]m_filename;
+}
 //Leer una imagen
 void Image::Load(const char* filename)
 {
@@ -36,6 +43,7 @@ void Image::Load(const char* filename)
   lodepng::decode(m_image, m_width, m_height, state, m_buffer);
 }
 
+//Guardar una imagen
 void Image::Save( const char* filename )
 {
   lodepng::encode(filename, m_image, m_width, m_height);
@@ -48,4 +56,23 @@ unsigned Image::width() const{
 
 unsigned Image::height() const{
     return m_height;
+}
+
+//Operator=
+Image& Image::operator=(const Image& other)
+{
+  m_width = other.m_width;
+  m_height = other.m_height;
+  m_image = other.m_image;
+  m_data = other.m_data;
+  m_filename = other.m_filename;
+  m_buffer = other.m_buffer;
+
+  return *this;
+}
+
+Image& Image::operator+(const Image& B)
+{
+  Image C;
+  
 }
