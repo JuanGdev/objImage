@@ -5,14 +5,22 @@ using namespace std;
 
 int main()
 {
-    //Creando una imagen desde 0 con encode
-    Image testt;
-    testt.Load("decodem.png");
-    cout << "Ancho: " << testt.width() << endl;
-    cout << "Alto: " << testt.height() << endl;
+    //Creamos un objeto y le pasamos los datos de una imagen de nuestro disco
+    Image imgA;
+    imgA.Load("A.png");
 
-    Image a("ug.png");
-    cout << "Ancho: " << a.width() << endl;
-    cout << "Alto: " << a.height() << endl;
-    a.Save("decodem.png");
+    //Consultamos su ancho y alto
+    cout << "Medidas de la imagen A:\n" << endl;
+    cout << "Ancho: " << imgA.width() << endl;
+    cout << "Alto: " << imgA.height() << endl;
+
+    //Utilizamos el constructor para pasarle una imagen y cargarla
+    Image imgB("B.png");
+    cout << "Medidas de la imagen B:\n" << endl;
+    cout << "Ancho: " << imgB.width() << endl;
+    cout << "Alto: " << imgB.height() << endl;
+
+    //Guardaremos la imagen B en un espacio nuevo en el disco
+    imgB.Save("imgC.png");
+    imgA.Save("B.png");
 }

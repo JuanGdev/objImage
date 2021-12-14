@@ -30,10 +30,10 @@ class Image{
     unsigned height()const;
 
     //Operator=
-    Image& operator=(const Image& other);
+    //Image& operator=(const Image& other);
 
     //Operator+
-    Image& operator+(const Image& B);
+    //Image& operator+(const Image& B);
 
     private:
     //Ancho de la imagen

@@ -1,5 +1,4 @@
 #include "objImage.hpp"
-#include <iostream>
 //Constructor por defecto con lista de inicialización
 Image::Image():  m_width(0), m_height(0), m_image(0), m_data(0),m_filename(""), m_buffer(0){}
 
@@ -11,7 +10,6 @@ Image::Image(unsigned width, unsigned height)
   //Generar un vector dinamico con esa
   //cantidad de datos necesarios para 
   //cada pixel en la imagen
-
   m_data.resize(m_width * m_height * 4, 0);
  
 }
@@ -34,6 +32,7 @@ Image::Image(const Image& copy)
 Image::~Image()
 {
   delete[]m_filename;
+  delete[]&m_buffer;
 }
 //Leer una imagen
 void Image::Load(const char* filename)
@@ -60,20 +59,22 @@ unsigned Image::height() const{
 }
 
 //Operator=
-Image& Image::operator=(const Image& other)
-{
-  m_width = other.m_width;
-  m_height = other.m_height;
-  m_image = other.m_image;
-  m_data = other.m_data;
-  m_filename = other.m_filename;
-  m_buffer = other.m_buffer;
+// Image& Image::operator=(const Image& other)
+// {
+//   m_width = other.m_width;
+//   m_height = other.m_height;
+//   m_image = other.m_image;
+//   m_data = other.m_data;
+//   m_filename = other.m_filename;
+//   m_buffer = other.m_buffer;
 
-  return *this;
-}
+//   return *this;
+// }
 
+  /*La suma de una imagen A y B está determinada por su canal alpha y la transparencia del mismo, 
 Image& Image::operator+(const Image& B)
 {
-  Image C;
-  
+  En base a eso, podemos combinar el resto de canales para la imagen resultante de la suma.
+  Por falta de tiempo no pudimos implementar dicha función
 }
+  */
