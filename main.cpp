@@ -20,7 +20,10 @@ int main()
     cout << "Ancho: " << imgB.width() << endl;
     cout << "Alto: " << imgB.height() << endl;
 
+    imgA = imgB;
     //Guardaremos la imagen B en un espacio nuevo en el disco
     imgB.Save("imgC.png");
-    imgA.Save("B.png");
+    imgA.Save("imgB.png");
+
+    
 }
