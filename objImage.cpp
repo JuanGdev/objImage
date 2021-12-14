@@ -46,7 +46,8 @@ void Image::Load(const char* filename)
 //Guardar una imagen
 void Image::Save( const char* filename )
 {
-  lodepng::encode(filename, m_image, m_width, m_height);
+  m_filename = filename;
+  lodepng::encode(m_filename, m_image, m_width, m_height);
 }
 
 //Funciones de acceso
